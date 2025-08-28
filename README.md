@@ -14,6 +14,6 @@ npm vite-plugin-svgr
 npm install --dev react-devtools@^3
 "# vite_react_example_base"
 
-vite_react_example_base.git
+
 
 
