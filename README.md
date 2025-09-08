@@ -1,8 +1,8 @@
- Select a framework:
-│  React
+Select a framework:
+│ React
 │
-◇  Select a variant:
-│  JavaScript + SWC
+◇ Select a variant:
+│ JavaScript + SWC
 
 npm i -D prettier
 
@@ -14,6 +14,4 @@ npm vite-plugin-svgr
 npm install --dev react-devtools@^3
 "# vite_react_example_base"
 
-
-
-
+firebase
