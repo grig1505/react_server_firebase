@@ -1,4 +1,4 @@
-:root {
+body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -20,7 +20,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+ 
 }
 
 .list {
@@ -31,4 +31,8 @@ h1 {
 
 .list-item {
 	margin: 10px;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

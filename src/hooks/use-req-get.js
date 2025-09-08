@@ -6,6 +6,7 @@ export const useReqGet = () => {
 	const [tdlist, setTdlist] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
 
+
 	useEffect(() => {
 		const tdlistRef = ref(db, "todos");
 		setIsLoading(true);
@@ -17,12 +18,10 @@ export const useReqGet = () => {
 			setIsLoading(false);
 		});
 
-		return () => unsubscribe();  
+		return () => unsubscribe();
 	}, []);
 
-	return {
-		isLoading,
-		tdlist,
-		setTdlist,
-	};
+
+
+	return { isLoading, tdlist, setTdlist};
 };

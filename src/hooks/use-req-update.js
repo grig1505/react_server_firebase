@@ -5,18 +5,15 @@ import { db } from "../firebase";
 export const useReqUpdate = () => {
 	const [isUpdating, setIsUpdating] = useState(false);
 
-	const reqUpdate = (id) => {
+	const reqUpdate = (id, newTitle, newBody) => {
 		setIsUpdating(true);
-
 		const refdb = ref(db, `todos/${id}`);
 
 		set(refdb, {
-			title: "Новый заголовок",
-			body: 'Новый текст',
+			title: newTitle,
+			body: newBody,
 		})
-			.then((response) => {
-				console.log("response", response);
-			})
+			.then(() => console.log("Запись обновлена!"))
 			.finally(() => setIsUpdating(false));
 	};
 

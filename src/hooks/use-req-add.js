@@ -5,16 +5,17 @@ import { db } from "../firebase";
 export const useReqAdd = () => {
 	const [isCreating, setIsCreating] = useState(false);
 
-	const reqAdd = () => {
+	const reqAdd = (title, body) => {
+		// добавляем параметры
 		setIsCreating(true);
-
 		const todoRef = ref(db, "todos");
+
 		push(todoRef, {
-			title:'Добавленная задача',
-			body: 'Текскт задачи',
+			title,
+			body,
 		})
-			.then((response) => {
-				console.log("response", response);
+			.then(() => {
+				console.log("Задача добавлена!");
 			})
 			.finally(() => setIsCreating(false));
 	};
